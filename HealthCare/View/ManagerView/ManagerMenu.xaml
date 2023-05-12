@@ -1,0 +1,35 @@
+﻿<Window x:Class="HealthCare.View.ManagerView.ManagerMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HealthCare.View.ManagerView"
+        mc:Ignorable="d"
+        Title="Upravnik" Height="350" Width="600" Closing="Window_Closing">
+    <Window.Resources>
+        <Style TargetType="Button" BasedOn="{StaticResource RoundedButton}">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+        </Style>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.15*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Row="0" Grid.Column="0"
+                Content="Oprema bolnice" Click="Button_Equipment" />
+        <Button Grid.Row="0" Grid.Column="1"
+                Content="Poručivanje dinamičke opreme" Click="Button_Ordering" />
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                Content="Raspoređivanje opreme" Click="Button_Rearranging" />
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                Content="Odjava" Click="Button_Logout" />
+    </Grid>
+</Window>
